@@ -1,18 +1,11 @@
-import mysql.connector
-mydb = mysql.connector.connect(
-    host = "localhost"
-    user = "root"
-    password = "toads123."
-    database = alx_book_store
-)
 
-CREATE DATABASE alx_book_store ;
-USE alx_book_store ;
+CREATE DATABASE alx_book_store;
+USE alx_book_store;
 
 CREATE TABLE Books (
-    book_id INT PRIMARY KEY ,
-    title VARCHAR(130) NOT NULL ,
-    author_id INT ,
+    book_id INT PRIMARY KEY,
+    title VARCHAR(130) NOT NULL,
+    author_id INT,
     price DOUBLE ,
     publication_date DATE ,
     FOREIGN KEY (author_id) REFERENCES Authors(author_id)
